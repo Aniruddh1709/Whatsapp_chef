@@ -1,0 +1,1 @@
+from .pred import predict_image

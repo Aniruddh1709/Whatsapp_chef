@@ -3,12 +3,16 @@ from flask_restful import Resource
 from flask_restful import reqparse
 from twilio.rest import Client 
 from twilio.twiml.messaging_response import MessagingResponse
+from app.prediction import predict_image
 from app import db
+from PIL import Image
 from app import app
 
 
 account_sid = 'secret' 
 auth_token = 'secret' 
+
+
 
 class WhatsappBot(Resource):
     
@@ -21,7 +25,7 @@ class WhatsappBot(Resource):
         
         # args=WhatsappBot.parser.parse_args()
         
- 
+        
         
         client = Client(account_sid,auth_token ) 
         if(resp=="Hello"):
@@ -36,6 +40,9 @@ class WhatsappBot(Resource):
                               body='I am your virtual chef',      
                               to='whatsapp:+919833129922' 
                           )
+        im=Image.open('/content/idli-with-idli.jpg')
+        
+        
             
  
         print(resp)
