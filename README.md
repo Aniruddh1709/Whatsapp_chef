@@ -47,6 +47,7 @@ https://drive.google.com/drive/folders/1ruaB-xkFLX3o7VzZnGbb_H-M37Uzydai?usp=sha
 * Send the joining text from your number to the temporary whatsapp number provided by twilio.
 * Go to app/crud_view/resources/controllers.py and edit the account_sid , auth_token as well as replace YOUR_NUMBER and YOUR_TWILIO_NUMBER.
 * Navigate to the app folder
+* Install Pytorch from the official website according to your PC specifications
 * Create a virtual environment
 * Run
 ```py
