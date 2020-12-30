@@ -30,6 +30,11 @@
 
 ## Screenshots:
 
+<div align="center">
+  <img src="images/screenshot.png" width="500px">
+</div>
+
+
 ## Instructions:
 
 * Clone the repository
