@@ -28,6 +28,8 @@
 
 ## Video demo link:
 
+* https://www.youtube.com/watch?v=Y4cgALd04Z4
+
 ## Screenshots:
 
 <div align="center">
@@ -43,7 +45,7 @@ https://drive.google.com/drive/folders/1ruaB-xkFLX3o7VzZnGbb_H-M37Uzydai?usp=sha
 * Paste it into app/prediction folder
 * Go to the official site of twilio an create a free account to get the required account_sid and auth_token and set the environment variables with these values. You will get a twilio whatsapp number.
 * Send the joining text from your number to the temporary whatsapp number provided by twilio.
-* Go to app/crud_view/controllers.py and edit the account_sid , auth_token as well as replace YOUR_NUMBER and YOUR_TWILIO_NUMBER.
+* Go to app/crud_view/resources/controllers.py and edit the account_sid , auth_token as well as replace YOUR_NUMBER and YOUR_TWILIO_NUMBER.
 * Navigate to the app folder
 * Create a virtual environment
 * Run
