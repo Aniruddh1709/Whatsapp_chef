@@ -30,8 +30,25 @@
 
 ## Screenshots:
 
+## Instructions:
 
-
-## Instructions To Operate The App
-
-
+* Clone the repository
+* Download the trained model from the link below
+https://drive.google.com/drive/folders/1ruaB-xkFLX3o7VzZnGbb_H-M37Uzydai?usp=sharing
+* Paste it into app/prediction folder
+* Go to the official site of twilio an create a free account to get the required account_sid and auth_token and environment variables with these values. You will get a twilio whatsapp number.
+* Send the joining text from your number to the temporary whatsapp number provided by twilio.
+* Go to app/crud_view/controllers.py and edit the account_sid , auth_token as well as replace YOUR_NUMBER and YOUR_TWILIO_NUMBER.
+* Navigate to the app folder
+* Create a virtual environment
+* Run
+```py
+> pip install -r "requirements.txt"
+> python run.py
+```
+* Download <a href="https://ngrok.com/download">ngrok</a>. Open another console in the ngrok folder and run
+``` py
+> ngrok http PORT_WHERE_run.py_IS_RUNNING
+```
+* Copy the url on which ngrok is forwarding and paste it in Twilio->'Programmable Messaging'->'Settings'->'Whatsapp Sandbox Settings'->'When a message comes in'
+* You are done! Send a food name or a food image to the number and wait for the recipe.
