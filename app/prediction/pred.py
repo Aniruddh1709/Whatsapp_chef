@@ -1,22 +1,24 @@
+import torch
 from torch.autograd import Variable
 from torch import nn
+
 from torchvision import transforms, models
 
 
 model = models.vgg16_bn(pretrained=True)
 # Freeze model weights
-for param in model.parameters():
-    param.requires_grad = False
+# for param in model.parameters():
+#     param.requires_grad = False
 model.classifier[6] = nn.Sequential(
                       nn.Linear(4096, 256), 
                       nn.ReLU(), 
                       nn.Dropout(0.5),
                       nn.Linear(256, 20),                   
                       nn.LogSoftmax(dim=1))
-for param in model.classifier[6].parameters():
-    param.requires_grad = True
-model.load_state_dict(torch.load(PATH))
-
+# for param in model.classifier[6].parameters():
+#     param.requires_grad = True
+model.load_state_dict(torch.load(r"C:\Users\91983\Desktop\Whatsapp Chef\app\prediction\best_checkpoint.model",map_location=torch.device('cpu')))
+model.eval()
        
 
 test_transform=transforms.Compose([
@@ -52,8 +54,7 @@ def predict_image(image):
     image_tensor = test_transform(image).float()
     image_tensor = image_tensor.unsqueeze_(0)
     input = Variable(image_tensor)
-    input = input.to(device)
     output = model(input)
     index = output.data.cpu().numpy().argmax()
     pred=classes[index]
-    return pred,index
+    return pred
