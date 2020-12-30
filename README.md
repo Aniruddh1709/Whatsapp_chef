@@ -31,7 +31,7 @@
 ## Screenshots:
 
 <div align="center">
-  <img src="images/screenshot.png" width="500px">
+  <img src="images/screenshot.png" width="800px">
 </div>
 
 
