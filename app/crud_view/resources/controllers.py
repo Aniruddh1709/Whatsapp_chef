@@ -38,9 +38,9 @@ class WhatsappBot(Resource):
                 message = client.messages \
                 .create(
                         
-                        from_='whatsapp:+14155238886',
+                        from_='whatsapp:YOUR_TWILIO_NUMBER',
                         body='Hi,I am your virtual chef.Send a picture or name of the dish that you would like to cook today',
-                        to='whatsapp:+919833129922'
+                        to='whatsapp:YOUR_NUMBER'
                        )
                 print("1")
                 # resp.append(Message('This is an SMS message from Twilio!'))
